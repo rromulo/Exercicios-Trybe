@@ -7,7 +7,6 @@ main.style.backgroundColor='white';
 main.style.color='black';
 
 const buttonBG = newElement('button');
-const buttonLH = newElement('button');
 
 buttonBG.setAttribute('id','buttonBG');
 buttonBG.innerText = 'Dark Mode';
@@ -77,3 +76,24 @@ function sizeFont() {
         paragrafo.style.fontSize='23px';
     }
 }sizeFont()
+
+const buttonLH = newElement('button');
+buttonLH.setAttribute('id','buttonLH');
+buttonLH.innerText = 'Ajustar Linha';
+main.appendChild(buttonLH);
+
+let btnLineheight = document.getElementById('buttonLH');
+btnLineheight.addEventListener('click',changelineH)
+
+if (storage.getItem('lineH') == null) {
+    storage.setItem('lineH', '16px')
+}
+
+function changelineH(){
+    if (storage.getItem('lineH') == '16px') {
+        storage.setItem('lineH', '20px')
+    } else {
+        storage.setItem('lineH', '16px')
+    }
+}
+
