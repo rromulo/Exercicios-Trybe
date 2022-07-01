@@ -20,4 +20,22 @@ if (kDark.getItem('darkMode') == null){
     kDark.setItem('darkMode', false);
     
 }
-
+function changeDarkMode(){
+    if (kDark.getItem('darkMode') == 'false'){
+        kDark.setItem('darkMode', true);
+        console.log(kDark.getItem('darkMode'))
+    } else{
+        kDark.setItem('darkMode', false);
+    }
+    darkMode();
+}
+function darkMode(){
+    console.log(kDark.getItem('darkMode'))
+    if(kDark.getItem('darkMode') == 'false'){
+        main.style.backgroundColor='white';
+        main.style.color='black';
+    } else {
+        main.style.backgroundColor='black';
+        main.style.color='white';
+    }  
+}darkMode()
