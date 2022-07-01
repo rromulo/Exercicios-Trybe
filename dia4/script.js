@@ -86,14 +86,23 @@ let btnLineheight = document.getElementById('buttonLH');
 btnLineheight.addEventListener('click',changelineH)
 
 if (storage.getItem('lineH') == null) {
-    storage.setItem('lineH', '16px')
+    storage.setItem('lineH', '20px')
 }
 
 function changelineH(){
-    if (storage.getItem('lineH') == '16px') {
-        storage.setItem('lineH', '20px')
+    if (storage.getItem('lineH') == '20px') {
+        storage.setItem('lineH', '30px')
     } else {
-        storage.setItem('lineH', '16px')
+        storage.setItem('lineH', '20px')
     }
+    lineHeigh()
 }
 
+function lineHeigh() {
+    let paragrafo = document.querySelector('.texto')
+    if(storage.getItem('lineH') == '20px') {
+        paragrafo.style.lineHeight='20px';
+    } else{
+        paragrafo.style.lineHeight='30px';
+    }
+}lineHeigh()
