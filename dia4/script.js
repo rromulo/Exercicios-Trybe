@@ -55,3 +55,25 @@ btnFont.addEventListener('click',changePX);
 
 
 
+if (storage.getItem('fontSize') == null) {
+    storage.setItem('fontSize', '16px')
+}
+
+function changePX(){
+    if(storage.getItem('fontSize') == '16px') {
+        storage.setItem('fontSize','23px');
+    } else{
+        storage.setItem('fontSize','16px');
+    }
+    sizeFont();
+}
+
+function sizeFont() {
+    let paragrafo = document.querySelector('.texto')
+    console.log(paragrafo)
+    if(storage.getItem('fontSize') == '16px') {
+        paragrafo.style.fontSize='16px';
+    } else{
+        paragrafo.style.fontSize='23px';
+    }
+}sizeFont()
