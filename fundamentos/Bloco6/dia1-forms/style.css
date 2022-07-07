@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.w50 {
+    width: 50%;
+}
+h1{
+    text-align: center;
+}
+form {
+    border: 3px solid #036B52;
+    border-radius: 4px;
+    max-width: 350px;
+    padding: 4px 2%;
+    margin: 0 auto;
+}
+
+label{
+    display: block;
+}
+fieldset{
+    display: flex;
+    margin: 4px 0;
+}
+fieldset label {
+    padding: 5px;
+    margin: 0 auto;
+    display: inline;
+}
+input[type="text"], input[type="email"] {
+    width: 100%;
+}
+
+input[type="submit"], input[type="reset"]{
+    padding: 10px 20px;
+    border: 1px solid gray;
+    color: gray;
+    border-radius: 8px;
+    margin: 10px auto;
+    background-color: white;
+    cursor: pointer;
+    display: block;
+    width: 200px;
+    transition: 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #036B52;
+    color: yellow;
+}
+
+input[type="reset"]:hover {
+    background-color: yellow;
+    color: #036B52;
+}
+
+button {
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+}
+textarea {
+    width: 250px;
+    margin: 0 auto;
+    resize: none;
+}
