@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>TrybeTip</title>
+</head>
+<body>
+    <h1 class="display-3">TrybeTip</h1>
+    <form method="get" id="formulario">
+        <label class="form-control" for="name">
+            Digite seu Nome:
+            <input class="form-control" type="text" name="name" id="name" minlength="10" maxlength="40">
+        </label>
+        <label for="email" class="form-control">
+            Digite seu E-mail:
+            <input class="form-control" type="email" name="emal" id="email" minlength="10" maxlength="50">
+        </label>
+        <fieldset class="form-control">
+            <legend>Destino</legend>
+            <label for="cidade" class="form-check-label">
+                Cidade
+                <input class="form-check-input"  type="radio" name="opcao" id="cidade" checked>
+            </label>
+            <label for="campo" class="form-label">
+                Campo
+                <input class="form-check-input" type="radio" name="opcao" id="campo">
+            </label>
+            <label for="praia" class="form-label">
+                Praia
+                <input class="form-check-input" type="radio" name="opcao" id="praia">
+            </label>
+            <label for="montanha" class="form-label">
+                Montanha
+                <input class="form-check-input" type="radio" name="opcao" id="montanha">
+            </label>
+        </fieldset>
+        <p>Digite sua resposta abaixo:</p>
+        <textarea class="form-control" name="resposta" id="resposta" cols="30" rows="10" placeholder="Resposta" maxlength="500"></textarea>
+        <label for="date">Data: 
+            <input type="date" name="date" id="date">
+        </label>
+        <label class="form-control" for="aceita1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+            <input type="checkbox" name="aceita1" id="aceita1">
+        </label>
+        <label class="form-control" for="aceita2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+            <input type="checkbox" name="aceita2" id="aceita2">
+        </label>
+        <input class="btn btn-success" type="submit" value="Enviar" id="submit">
+        <input class="btn btn-warning" type="reset" value="Resetar" id="reset">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
