@@ -25,4 +25,29 @@ const aposta = (numAposta, checaSorteio) => {
   const sorteio = Math.floor(Math.random(1) * 5);
   return checaSorteio(numAposta, sorteio);
 }
-console.log(aposta(numAposta(3), checaSorteio))
+// console.log(aposta(numAposta(3), checaSorteio))
+
+const comparaRespostas = (gabarito, resposta) => {
+  let pointAcerto = 0;
+  let pointError = 0;
+  let totalPontos = 0;
+  for (i in gabarito) {
+    if (resposta[i] === gabarito[i]) {
+      pointAcerto += 1;
+    } else {
+      if (resposta[i] != gabarito[i]) {
+        if (resposta[i] === 'N.A') {
+          pointAcerto += 0;
+        }
+        pointError += 0.5;
+      }
+    }
+  }
+  totalPontos = pointAcerto - pointError;
+  return `pontos de acertos ${pointAcerto}, pontos retirados ${pointError}, total de pontos ${totalPontos}`;
+}
+const prova = (gabarito, resposta, compairAnswer) => {
+
+  return compairAnswer(gabarito, resposta);
+}
+console.log(prova(['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'], ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'], comparaRespostas))
