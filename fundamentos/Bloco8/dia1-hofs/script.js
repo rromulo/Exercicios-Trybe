@@ -11,7 +11,7 @@ const newEmployees = (func) => {
   }
   return employees;
 };
-// console.log(newEmployees(newCollaborator));
+console.log(newEmployees(newCollaborator));
 
 const numAposta = (numAposta) => {
   return numAposta;
@@ -25,7 +25,7 @@ const aposta = (numAposta, checaSorteio) => {
   const sorteio = Math.floor(Math.random(1) * 5);
   return checaSorteio(numAposta, sorteio);
 }
-// console.log(aposta(numAposta(3), checaSorteio))
+console.log(aposta(numAposta(3), checaSorteio))
 
 const comparaRespostas = (gabarito, resposta) => {
   let pointAcerto = 0;
@@ -38,8 +38,9 @@ const comparaRespostas = (gabarito, resposta) => {
       if (resposta[i] != gabarito[i]) {
         if (resposta[i] === 'N.A') {
           pointAcerto += 0;
+        } else {
+          pointError += 0.5;
         }
-        pointError += 0.5;
       }
     }
   }
