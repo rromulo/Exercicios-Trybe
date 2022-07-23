@@ -165,3 +165,11 @@ function everyoneWasBornOnSecXX(seculo) {
   console.log(expectedResultThree);
 }
 everyoneWasBornOnSecXX(expectedResultTwo);
+
+let expectedResultFour = true;
+
+function someBookWasReleaseOnThe80s(decada) {
+  decada.some((decada) => decada.releaseYear >= 1980 && decada.releaseYear < 1990? expectedResultFour = true : expectedResultFour = false);
+  console.log(expectedResultFour);
+}
+someBookWasReleaseOnThe80s(expectedResultTwo);
