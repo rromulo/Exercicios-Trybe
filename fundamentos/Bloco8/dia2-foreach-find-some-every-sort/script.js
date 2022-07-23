@@ -156,4 +156,12 @@ function booksOrderedByReleaseYearDesc(books) {
   // escreva aqui seu código
   return books.sort((a, b) => a.releaseYear - b.releaseYear ? 1 : -1)
 }
-console.log(booksOrderedByReleaseYearDesc(expectedResultTwo));
+// console.log(booksOrderedByReleaseYearDesc(expectedResultTwo));
+
+let expectedResultThree = false;
+
+function everyoneWasBornOnSecXX(seculo) {
+  seculo.every((seculo) => seculo.author.birthYear >= 1900 ? expectedResultThree = true : expectedResultThree = false);
+  console.log(expectedResultThree);
+}
+everyoneWasBornOnSecXX(expectedResultTwo);
